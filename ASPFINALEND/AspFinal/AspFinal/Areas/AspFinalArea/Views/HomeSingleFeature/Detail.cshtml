@@ -1,0 +1,19 @@
+﻿@model SingleFeature
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3>@Model.Title</h3>
+            <span class="@Model.IconField" style="font-size:50px;background-color:goldenrod;color:black;width:80px;height:80px;text-align:center;padding-top:10px;"></span>
+            
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <a asp-action="Index"><i class="fas fa-arrow-left"></i> Go back</a>
+        </div>
+    </div>
+</div>

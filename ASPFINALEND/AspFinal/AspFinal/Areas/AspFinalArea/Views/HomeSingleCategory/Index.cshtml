@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SingleCategorie>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">Slider</h5>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Image</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int count = 1;
+                        }
+                        @for (int i = 0; i < 6; i++)
+                        {
+                            <tr>
+                                <th scope="row">@count</th>
+                                <td>
+                                    <img src="~/img/@Model.ElementAt(i).Image" alt="Alternate Text" width="180px" />
+                                </td>
+
+                                <td>
+                                    <a asp-action="Update" asp-route-id="@Model.ElementAt(i).Id" class="btn btn-warning">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            count++;
+                        }
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
